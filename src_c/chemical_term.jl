@@ -151,6 +151,7 @@ function chemical_value(Qbase, cellxmax, cellymax, Rd, nval, nch)
                 end
                 chlambda_tr[i,j] += chi[i,j,si]/temp
             end
+            chlambda_tr[i,j] = 15/4 * kb * chlambda_tr[i,j]
 
             # 対象の行と列を足して(si,si)を引く
             # [ N2-N2   N2-N ]
