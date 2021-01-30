@@ -16,8 +16,8 @@
 # -- time step --
 "time_integ":"1",      # 1 = explicit, 2 = lusgs
 "nt":"1.0e4",          # 時間ステップ数
-"dt":"1.0e-6",       # 時間刻み幅[s]
-"every_outnum":"1.0e2",      # 出力毎タイムステップ
+"dt":"5.0e-7",       # 時間刻み幅[s]
+"every_outnum":"1.0e3",      # 出力毎タイムステップ
 "inner_step":"10",       # 疑似時間ステップ数
 "dtau":"1.0e-2",       # 疑似時間刻み幅[s]
 
