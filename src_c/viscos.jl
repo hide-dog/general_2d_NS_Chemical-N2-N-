@@ -45,7 +45,7 @@ function central_diff(Qbase, Qcon, cellxmax, cellymax, mu, lambda, chD, chi,
             tau_xx = 2/3*mu_av*(2*( vecAx[i,j,1] * dudxi + vecAy_xav * dudeta )
                     - (vecAx[i,j,2]*dvdxi + vecAy_yav*dvdeta ))          
                     
-            tau_yy = 2/3*mu_av*(( vecAx[i,j,1]*dudxi -vecAy_xav*dudeta )
+            tau_yy = 2/3*mu_av*(-( vecAx[i,j,1]*dudxi +vecAy_xav*dudeta )
                     + 2*(vecAx[i,j,2]*dvdxi + vecAy_yav*dvdeta ))          
                     
             tau_xy = mu_av*(                
@@ -130,7 +130,7 @@ function central_diff(Qbase, Qcon, cellxmax, cellymax, mu, lambda, chD, chi,
             tau_xx = 2/3*mu_av*(2*( vecAx_xav * dudxi + vecAy[i,j,1] * dudeta )
                     - (vecAx_yav*dvdxi + vecAy[i,j,2]*dvdeta ))          
                     
-            tau_yy = 2/3*mu_av*(( vecAx_xav*dudxi -vecAy[i,j,1]*dudeta )
+            tau_yy = 2/3*mu_av*(-( vecAx_xav*dudxi + vecAy[i,j,1]*dudeta )
                     + 2*(vecAx_yav*dvdxi + vecAy[i,j,2]*dvdeta ))          
                     
             tau_xy = mu_av*(                
