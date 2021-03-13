@@ -1,7 +1,7 @@
 # ------------------------------------
-# advection term by AUSM+up
+# advection term by AUSM+
 # ------------------------------------
-function AUSM_plusup(Qbase, Qcon, cellxmax, cellymax, vecAx, vecAy, specific_heat_ratio, Minf, volume, nval, nch)
+function AUSM_plus(Qbase, Qcon, cellxmax, cellymax, vecAx, vecAy, specific_heat_ratio, Minf, volume, nval, nch)
     E_adv_hat = zeros(cellxmax+1,   cellymax, nval)
     F_adv_hat = zeros(  cellxmax, cellymax+1, nval)
     g         = specific_heat_ratio
@@ -47,8 +47,8 @@ function AUSM_plusup(Qbase, Qcon, cellxmax, cellymax, vecAx, vecAy, specific_hea
             UR = Qbase[i,j,2]*vAxx + Qbase[i,j,3]*vAxy
             pR = Qbase[i,j,4]
         
-            #mdot, ph = AUSM_plus_half(rhoL, rhoR, UL, UR, pL, pR, g,i,j)
-            mdot, ph = AUSM_plusup_half(rhoL, rhoR, UL, UR, pL, pR, Minf, g, i, j)
+            mdot, ph = AUSM_plus_half(rhoL, rhoR, UL, UR, pL, pR, g,i,j)
+            #mdot, ph = AUSM_plusup_half(rhoL, rhoR, UL, UR, pL, pR, Minf, g, i, j)
             
             # flux half
             sqAx = (vecAx[i,j,1]^2 + vecAx[i,j,2]^2)^0.5
@@ -100,8 +100,8 @@ function AUSM_plusup(Qbase, Qcon, cellxmax, cellymax, vecAx, vecAy, specific_hea
             pR = Qbase[i,j,4]
 
             # scheme
-            #mdot, ph = AUSM_plus_half(rhoL, rhoR, VL, VR, pL, pR, g,i,j)
-            mdot, ph = AUSM_plusup_half(rhoL, rhoR, VL, VR, pL, pR, Minf, g, i, j)
+            mdot, ph = AUSM_plus_half(rhoL, rhoR, VL, VR, pL, pR, g,i,j)
+            #mdot, ph = AUSM_plusup_half(rhoL, rhoR, VL, VR, pL, pR, Minf, g, i, j)
             
             # flux half
             sqAy = (vecAy[i,j,1]^2 + vecAy[i,j,2]^2)^0.5

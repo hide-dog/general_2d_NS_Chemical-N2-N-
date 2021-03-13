@@ -1,4 +1,4 @@
-    using ProgressMeter
+using ProgressMeter
 
 function main()
     out_dir  = "result"
@@ -62,7 +62,7 @@ function main()
             #println(Qcon[1,3,:])
             # advection_term
             #E_adv_hat, F_adv_hat = AUSM(Qbase,Qcon,cellxmax,cellymax,vecAx,vecAy,specific_heat_ratio)
-            E_adv_hat, F_adv_hat = AUSM_plusup(Qbase, Qcon, cellxmax, cellymax, vecAx, vecAy, specific_heat_ratio, Minf, volume, nval, nch)
+            E_adv_hat, F_adv_hat = AUSM_plus(Qbase, Qcon, cellxmax, cellymax, vecAx, vecAy, specific_heat_ratio, Minf, volume, nval, nch)
                                               
             #println("AUSM")
             
