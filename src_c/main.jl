@@ -63,7 +63,7 @@ function main()
             # advection_term
             #E_adv_hat, F_adv_hat = AUSM(Qbase,Qcon,cellxmax,cellymax,vecAx,vecAy,specific_heat_ratio)
             E_adv_hat, F_adv_hat = AUSM_plusup(Qbase, Qcon, cellxmax, cellymax, vecAx, vecAy, specific_heat_ratio, Minf, volume, nval, nch)
-            
+                                              
             #println("AUSM")
             
             #println(Qcon[40,101,:])

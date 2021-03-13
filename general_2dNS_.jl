@@ -1,5 +1,5 @@
 # src path
-src_path = "C:\\Users\\xxx\\Desktop\\git\\general_2d_NS_Chemical-N2-N-\\src_c\\"
+src_path = "C:\\Users\\hidee\\Desktop\\git\\general_2d_NS_Chemical-N2-N-\\src_c\\"
 
 # main (変更しないこと)
 src_read="read_grid.jl"
@@ -23,13 +23,13 @@ src_read="value_setup.jl"
 include(src_path*src_read)
 src_read="viscos.jl"
 include(src_path*src_read)
-src_read="constant.jl"
+src_read="chemical_constant.jl"
 include(src_path*src_read)
 src_read="chemical_term.jl"
 include(src_path*src_read)
-
-src_read="allocation.jl"
+src_read="setup.jl"
 include(src_path*src_read)
+
 src_read="cal_time_step.jl"
 include(src_path*src_read)
 src_main="main.jl"
